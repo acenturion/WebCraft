@@ -43,7 +43,7 @@
 		<div id="nickname">
 			<span>Nickname:</span><br />
 			<input id="nickname_input" type="text" maxlength="15" spellcheck="false" onkeypress="onNicknameEnter( this, event )" />
-			<button class="minecraft-btn" onclick="handleOnPressConnect()">Connect</button>
+			<button class="minecraft-btn" onclick="handleOnPressConnect()">Join Server</button>
 		</div>
 
 		<!-- Joining information -->
@@ -86,7 +86,8 @@
 
 			//Handle on press connect
 			function handleOnPressConnect(){
-				onNicknameEnter(page.nicknameInput, {keyEvent : {keyCode: 13}});
+			
+				onNicknameEnter(page.nicknameInput, {keyCode: 13});
 			}
 
 			// Respond to chat message entry
