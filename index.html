@@ -43,6 +43,7 @@
 		<div id="nickname">
 			<span>Nickname:</span><br />
 			<input id="nickname_input" type="text" maxlength="15" spellcheck="false" onkeypress="onNicknameEnter( this, event )" />
+			<button class="minecraft-btn" onclick="handleOnPressConnect()">Connect</button>
 		</div>
 
 		<!-- Joining information -->
@@ -81,6 +82,11 @@
 				nicknameInput.blur();
 
 				joinGame( nickname );
+			}
+
+			//Handle on press connect
+			function handleOnPressConnect(){
+				onNicknameEnter(page.nicknameInput.value, 13);
 			}
 
 			// Respond to chat message entry
