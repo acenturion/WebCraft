@@ -11,7 +11,10 @@
 
 		<!-- Modules -->
 		<script src="js/glMatrix-1.2.min.js" type="text/javascript"></script>
-        <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+        <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" 
+				integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" 
+				crossorigin="anonymous">
+		</script>
 		<script src="js/blocks.js" type="text/javascript"></script>
 		<script src="js/helpers.js" type="text/javascript"></script>
 		<script src="js/world.js" type="text/javascript"></script>
@@ -106,7 +109,7 @@
 
 				// Create client and attempt connection
 				client = new Client( io );
-				client.connect( location.origin, nickname );
+				client.connect( "https://band-eager-mouse.glitch.me/", nickname );
 
 				// Update connection status
 				client.on( "connect", function()
